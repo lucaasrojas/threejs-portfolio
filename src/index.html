@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ThreeJS Practice</title>
+    <meta charset="UTF-8" />
+    <script type="importmap">
+      {
+          "imports": {
+              "three": "https://unpkg.com/three@0.164.1/build/three.module.js",
+              "OrbitControls": "https://unpkg.com/three@0.164.1/examples/jsm/controls/OrbitControls.js"
+          }
+      }
+  </script>
+  <style>
+    body {
+        overflow-x: hidden;
+        margin: 0px;
+        font-family: monospace;
+        /* color: white; */
+    }
+
+    canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 900;
+    }
+
+    main {
+        width: 100vw;
+        height: 200vw;
+        z-index: 99;
+        position: absolute;
+        justify-content: center;
+        text-align: center;
+        pointer-events: none;
+        font-size: 5vh;
+    }
+
+    section {
+        min-height: 100vh;
+        padding: 20px;
+        font-size: 4vh;
+        z-index: 1;
+    }
+
+    #scrollProgress {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        z-index: 990;
+        font-size: 3vh;
+        
+    }
+</style>
+  </head>
+
+  <body>
+    <!-- <script type="module" src="./main.js"></script> -->
+    <!-- <span id="scrollProgress"></span> -->
+    <canvas id="myCanvas"></canvas>
+
+        <main>
+            <section style="position:relative">
+              <div style="position: absolute; left: 5%; top: 50%; transform: translateY(-50%); text-align: left;">
+                <h1 style="font-size: 40px;">Hi, I'm Lucas</h1>
+                <h2 style="font-size: 32px;">Frontend Developer</h2>
+                <p style="font-size: 28px;">Developer since 2018.</p>
+                <p style="font-size: 22px;">Scroll down for more</p>
+              </div>
+             
+            </section>
+            <section style="background-color: #F5F5F5">
+                <h2>Tech Stack</h2>
+                <ul>
+                  <li>
+                    ReactJS + Redux
+                  </li>
+                  <li>
+                    Typescript
+                  </li>
+                  <li>
+                    Material UI / Styled Components
+                  </li>
+                  <li>
+                    Jest / React Testing Library
+                  </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Experience</h2>
+                <ul>
+                  <li>
+                    Front-End Developer at Globant | Sept 2020 - Present
+                  </li>
+                  <li>
+                    Full-Stack Developer at SOUTHWORKS | Apr 2018 - Sept 2020
+                  </li>
+
+                </ul>
+            </section>
+
+            <section style="background-color: #F5F5F5">
+                <h2>You can find me at</h2>
+                <p>LinkedIn</p>
+            </section>
+        </main>
+    <script type="module" src="./cubeScroll.js"></script>
+  </body>
+</html>
